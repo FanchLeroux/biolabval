@@ -1,0 +1,24 @@
+[project]
+name = "biolabval"
+version = "0.1.0"
+description = "Codes for producing the figures of the paper about the laboratory validation of the Bi-O edge wavefront sensor"
+readme = "README.md"
+authors = [
+    { name = "fleroux", email = "francois.leroux.pro@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "astropy>=8.0.1",
+    "h5py>=3.16.0",
+    "ipykernel>=7.3.0",
+    "joblib>=1.5.3",
+    "jsonpickle>=4.1.2",
+    "matplotlib>=3.11.1",
+    "numpy>=2.5.2",
+    "scikit-image>=0.26.0",
+    "tqdm>=4.70.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
