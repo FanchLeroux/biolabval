@@ -123,7 +123,7 @@ rm data.zip
 From the root of the repository, open PowerShell and run:
 
 ```powershell
-curl.exe -L -o NUL -w "Speed: %{speed_download} bytes/s`nTotal: %{time_total}s`n" "https://sandbox.zenodo.org/records/593052/files/data.zip?download=1"
+curl.exe -L -o data.zip -w "`nSpeed: %{speed_download} bytes/s`nTotal: %{time_total}s`n" "https://sandbox.zenodo.org/records/593052/files/data.zip?download=1"
 ```
 
 Extract the archive:
