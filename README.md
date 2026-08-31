@@ -1,4 +1,4 @@
-# Bi-O-Edge Wavefront Sensor — Laboratory Validation
+# Bi-O edge Wavefront Sensor — Laboratory Validation
 
 This repository contains the Python code used to reproduce the figures presented in the paper on the **The Bi-O-Edge wavefront sensor: laboratory experimental
 demonstration**.
@@ -209,7 +209,7 @@ uv run python scripts/figure_14_diagonal_fourier_modes_sensitivity.py
 
 ## 6. Computational resources required
 
-The scripts `figure_13_interaction_matrix_svd.py`, `figure_16_linearity.py`, `figures_11_17_18_19_20_closed_loop.py`, `figures_Dp1_Dp2_pyramid_vs_bioedge_fourier_modes.py` and `figure_Dp3_pyramid_vs_bioedge_KL_modes.py` require a large amount of RAM and may require to be run on a workstation or computing server with sufficient RAM rather than on a personal laptop.
+The scripts `figure_13_interaction_matrix_svd.py`, `figure_16_linearity.py`, `figures_11_17_18_19_20_closed_loop.py`, `figures_Dp1_Dp2_pyramid_vs_bioedge_fourier_modes.py` and `figure_Dp3_pyramid_vs_bioedge_KL_modes.py` require a large amount of RAM and may need to be run on a workstation or computing server with sufficient RAM rather than on a personal laptop.
 
 ---
 
