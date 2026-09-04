@@ -295,13 +295,13 @@ fig_twin.savefig(
 # %% compute fitting error
 
 pupil_sim = ~np.any(modal_basis_sim == 0, axis=0)
-modal_basis_sim_flat = modal_basis_sim[:, pupil_sim].T
+controlled_modal_basis_flat = modal_basis_sim[:n_controlled_modes, pupil_sim].T
 turbulence_sim_flat = turbulence_sim[:, pupil_sim].T
-modal_projector_sim = np.linalg.pinv(modal_basis_sim_flat)
+modal_projector_sim = np.linalg.pinv(controlled_modal_basis_flat)
 
 residual_turbulence_sim_flat = (
     turbulence_sim_flat
-    - ((modal_projector_sim @ turbulence_sim_flat).T @ modal_basis_sim_flat.T).T
+    - ((modal_projector_sim @ turbulence_sim_flat).T @ controlled_modal_basis_flat.T).T
 )
 
 residual_turbulence_sim = np.full_like(turbulence_sim, np.nan)
@@ -458,10 +458,10 @@ fig_names.append(fig_name)
 
 fig_strehl.savefig(fig_dir / fig_name, bbox_inches="tight", pad_inches=0.001)
 
-print(f"Mean Strehl ratio - experimental: {strehl_exp[30:].mean():.3f}")
-print(f"Mean Strehl ratio - simulation: {closed_loop_data_sim.strehl[30:].mean():.3f}")
+print(f"Mean Strehl ratio - experimental: {strehl_exp[10:].mean():.4f}")
+print(f"Mean Strehl ratio - simulation: {closed_loop_data_sim.strehl[10:].mean():.4f}")
 print(
-    f"Mean Strehl ratio - fitting error only: {np.exp(-residual_turbulence_sim_flat.std(axis=0)[30:] ** 2).mean():.3f}"
+    f"Mean Strehl ratio - fitting error only: {np.exp(-residual_turbulence_sim_flat.std(axis=0) ** 2).mean():.4f}"
 )
 
 # %% Modal decomposition illustration
