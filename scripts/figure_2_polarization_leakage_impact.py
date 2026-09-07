@@ -121,4 +121,4 @@ fig.savefig(
 
 # %%
 
-print(f"Run completed successfully.\nFigures saved in: {fig_dir/fig_name}")
+print(f"Run completed successfully.\nFigure saved in: {fig_dir/fig_name}")

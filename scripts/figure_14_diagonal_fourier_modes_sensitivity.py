@@ -3,6 +3,7 @@
 import h5py
 import matplotlib.pyplot as plt
 import numpy as np
+from scipy.ndimage import rotate
 
 from biolabval.numerical_twin import build_numerical_twin
 from biolabval.utils.sensitivity import (
@@ -29,6 +30,8 @@ fig_dir = config.paths.root_dir / "outputs"
 
 compute_misreg = False
 
+# mask angle with respect to fourier modes
+mask_angle = 15  # [degrees]
 
 thorcam_pixel_pitch = 3.45e-6  # [m]
 
@@ -61,11 +64,11 @@ with h5py.File(
     modal_basis_exp = interaction_matrix_grp["modal_basis"][...]
     reference_intensities_exp = interaction_matrix_grp["reference_intensities"][...]
 
-from scipy.ndimage import rotate
-
 pupil = np.all(modal_basis_exp, axis=0)
 modal_basis_exp = (
-    rotate(modal_basis_exp, 15, axes=(1, 2), reshape=False, order=1, mode="nearest")
+    rotate(
+        modal_basis_exp, mask_angle, axes=(1, 2), reshape=False, order=1, mode="nearest"
+    )
     * pupil
 )
 modal_basis_exp /= modal_basis_exp[:, pupil].std(axis=1)[:, None, None]

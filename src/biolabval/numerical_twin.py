@@ -448,7 +448,6 @@ def build_numerical_twin(
         invert=False,
         display=True,
         single_pass=False,
-        invert=False,
     )
     interaction_matrix_sim = sim_calib.D * src.wavelength / (2 * np.pi)
 
