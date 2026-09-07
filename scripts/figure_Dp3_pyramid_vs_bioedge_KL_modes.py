@@ -256,7 +256,7 @@ axs[0].plot(
 )
 axs[0].plot(
     photon_noise_sensitivity_sim_bioedge.tolist(),
-    label="grey bioedge",
+    label="Bi-O edge",
     linestyle="-.",
     linewidth=linewidth,
     color="#1f77b4",

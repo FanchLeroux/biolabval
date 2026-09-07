@@ -294,7 +294,7 @@ for kind in kinds:
     plt.plot(
         [0, *photon_noise_sensitivity_grey_bioedge],
         "-",
-        label="grey bioedge",
+        label="Bi-O edge",
         linewidth=linewidth,
         color="#1f77b4",
     )

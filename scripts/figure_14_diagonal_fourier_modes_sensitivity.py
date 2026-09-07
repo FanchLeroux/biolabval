@@ -27,7 +27,7 @@ sim_tel_resolution_factor = 2
 # dirc figures
 fig_dir = config.paths.root_dir / "outputs"
 
-compute_misreg = True
+compute_misreg = False
 
 
 thorcam_pixel_pitch = 3.45e-6  # [m]
@@ -60,6 +60,15 @@ with h5py.File(
     valid_pixels_exp = interaction_matrix_grp["valid_pixels"][...]
     modal_basis_exp = interaction_matrix_grp["modal_basis"][...]
     reference_intensities_exp = interaction_matrix_grp["reference_intensities"][...]
+
+from scipy.ndimage import rotate
+
+pupil = np.all(modal_basis_exp, axis=0)
+modal_basis_exp = (
+    rotate(modal_basis_exp, 15, axes=(1, 2), reshape=False, order=1, mode="nearest")
+    * pupil
+)
+modal_basis_exp /= modal_basis_exp[:, pupil].std(axis=1)[:, None, None]
 
 # %% Build numerical twins
 

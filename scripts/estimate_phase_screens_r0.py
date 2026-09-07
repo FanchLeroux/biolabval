@@ -309,14 +309,14 @@ result = least_squares(
 
 r0_fit = np.exp(result.x[0])
 
-print(f"Fitted r0 = {r0_fit:.3f} m")
+print(f"Fitted r0 = {r0_fit:.4f} m")
 print(f"Fixed L0 = {L0:.1f} m")
 
 
 # %%
 
-print(f"r0 at 500 nm: {1e2*r0_500_nm:.2f} [cm]")
-print(f"r0 at 635 nm: {1e2*r0_635_nm:.2f} [cm]\n")
+print(f"r0 at 500 nm: {1e2*r0_500_nm:.4f} [cm]")
+print(f"r0 at 635 nm: {1e2*r0_635_nm:.4f} [cm]\n")
 
 print(f"Empirical fitting error: {mean_fitting_error:.4f} [rad^2 RMS]")
 print(f"SR - empirical fitting error only: {sr_fitting_error:.4f}\n")
