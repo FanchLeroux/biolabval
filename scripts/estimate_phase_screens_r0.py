@@ -257,3 +257,5 @@ plt.legend()
 plt.show()
 
 # %%
+
+print(f"Run completed successfully")

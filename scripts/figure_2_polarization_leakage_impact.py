@@ -110,7 +110,7 @@ plt.legend(
     bbox_to_anchor=(1.0, 0.05),
 )
 
-fig_name = f"figure_5_polarization_leakage_impact.pdf"
+fig_name = f"figure_2_polarization_leakage_impact.pdf"
 
 fig.savefig(
     fig_dir / fig_name,
