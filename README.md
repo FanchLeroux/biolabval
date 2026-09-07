@@ -1,7 +1,6 @@
 # Bi-O edge Wavefront Sensor — Laboratory Validation
 
-This repository contains the Python code used to reproduce the figures presented in the paper on the **The Bi-O-Edge wavefront sensor: laboratory experimental
-demonstration**.
+This repository contains the Python code used to reproduce the figures presented in the paper on the **The Bi-O edge wavefront sensor: laboratory validation**.
 
 The repository contains the analysis and simulation scripts. The experimental data are hosted separately on Zenodo because of their large size.
 
@@ -179,7 +178,8 @@ The available scripts include:
 
 ```text
 scripts/
-├── figure_5_polarization_leakage_impact.py
+├── error_budget.py
+├── figure_2_polarization_leakage_impact.py
 ├── figure_6_bio_profile_illustration.py
 ├── figure_12_interaction_matrix_visual.py
 ├── figure_13_interaction_matrix_svd.py
