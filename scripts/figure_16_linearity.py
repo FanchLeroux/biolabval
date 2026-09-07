@@ -184,9 +184,13 @@ for mode_index, n_mode in enumerate(modes_numbers):
 
     axs[plot_index].set_title(text, fontsize=fontsize_title)
 
-axs[0].legend(fontsize=fontsize_legend, loc="upper left")
+axs[0].legend(fontsize=7, loc="lower right")
 
+# for ax in axs.flat:
+#     ax.tick_params(axis="both", labelsize=fontsize_tick)
 for ax in axs.flat:
+    ax.set_xticks([-2, -1, 0, 1, 2])
+    ax.set_yticks([-2, -1, 0, 1, 2])
     ax.tick_params(axis="both", labelsize=fontsize_tick)
 
 # Turn off any unused subplots
