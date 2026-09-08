@@ -153,8 +153,8 @@ fig_mask_transmission_h, ax2 = plt.subplots(
 x_axis = x_profile - x0 - (x1 - x0) / 2  # set 0 at the start of the profile
 x_axis = x_axis * 6.5  # convert to microns
 
-ax2.plot(x_axis, profile, "-", label="data", linewidth=linewidth)
-ax2.plot(x_axis, fit_curve, ":", label="fit", linewidth=linewidth)
+ax2.plot(x_axis, profile, "-", label="experimental data", linewidth=linewidth)
+ax2.plot(x_axis, fit_curve, ":", label="numerical fit", linewidth=linewidth)
 
 ax2.axvline(
     -120,

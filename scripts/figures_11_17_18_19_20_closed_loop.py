@@ -482,14 +482,14 @@ axs[0].plot(
 
 axs[0].plot(
     residual_phases_modal_decomposition_exp[30:].std(axis=0),
-    label="closed loop - exp",
+    label="closed loop - experimental",
     linestyle="dashed",
     zorder=0,
     linewidth=linewidth,
 )
 axs[0].plot(
     closed_loop_data_sim.residual_phases_modal_decomposition[30:].std(axis=0),
-    label="closed loop - sim",
+    label="closed loop - simulation",
     linestyle="dotted",
     linewidth=linewidth,
 )
@@ -518,7 +518,7 @@ axs[1].plot(
 axs[1].plot(
     np.arange(limit, len(turbulent_phases_modal_decomposition_exp.std(axis=0))),
     residual_phases_modal_decomposition_exp[30:].std(axis=0)[limit:],
-    label="closed loop - exp",
+    label="closed loop - experimental",
     linestyle="dashed",
     zorder=0,
     linewidth=linewidth,
@@ -526,7 +526,7 @@ axs[1].plot(
 line = axs[1].plot(
     np.arange(limit, len(turbulent_phases_modal_decomposition_exp.std(axis=0))),
     closed_loop_data_sim.residual_phases_modal_decomposition[30:].std(axis=0)[limit:],
-    label="closed loop - sim",
+    label="closed loop - simulation",
     linestyle=":",
     linewidth=linewidth,
 )

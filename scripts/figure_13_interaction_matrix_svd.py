@@ -99,7 +99,7 @@ plt.plot(
 )
 plt.plot(
     s_sim,
-    label=f"simulated - condition number: {(s_sim[0]/s_sim[-1]):.2f}",
+    label=f"simulation - condition number: {(s_sim[0]/s_sim[-1]):.2f}",
     linestyle="-.",
     linewidth=linewidth,
 )
