@@ -12,7 +12,7 @@ https://github.com/FanchLeroux/biolabval
 
 The data are available on Zenodo:
 
-https://sandbox.zenodo.org/records/593052 (to be modified)
+https://doi.org/10.5281/zenodo.24111908
 
 ---
 
