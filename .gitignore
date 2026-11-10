@@ -1,0 +1,48 @@
+# Ignore everything in the data and output folders
+data/**
+outputs/**
+
+# Exception for .gitkeep
+!*/
+!**/.gitkeep
+
+# Python specific
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+
+# venv
+.venv/**
+
+
+# IDEs
+.vscode/
+
+# LOGs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Config files
+*.yml
+*.yaml
+*.lut
+
+# Data files
+*.h5
+*.hdf5
+*.fits
+*.pkl
+*.npy
+*.zip
+
+# Figures
+*.pdf
+*.svg
+*.jpeg
+*.png
+*.gif
