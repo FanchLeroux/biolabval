@@ -163,10 +163,10 @@ ax2.axvline(
 )
 ax2.axvline(120, color="k", ls=":", linewidth=0.8 * linewidth)
 ax2.axhline(
-    y1, color="grey", ls="--", label=f"bottom plateau = {y1:.1%}", linewidth=linewidth
+    y1, color="grey", ls="--", label=f"top plateau = {y1:.1%}", linewidth=linewidth
 )
 ax2.axhline(
-    y0, color="k", ls="--", label=f"top plateau = {y0:.1%}", linewidth=linewidth
+    y0, color="k", ls="--", label=f"bottom plateau = {y0:.1%}", linewidth=linewidth
 )
 
 ax2.set_xlabel("Spatial coordinate [µm]", fontsize=fontsize_label)
