@@ -447,7 +447,7 @@ plt.plot(
 )
 plt.plot(
     np.exp(-residual_turbulence_sim_flat.std(axis=0) ** 2)[:n_iter],
-    label="fiting error only",
+    label="fitting error only",
     linewidth=linewidth,
 )
 plt.ylabel("Strehl ratio", fontsize=fontsize_label)

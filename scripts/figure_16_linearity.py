@@ -218,12 +218,12 @@ for ax in axs[len(modes_numbers) - 1 :]:
     ax.axis("off")
 
 fig_linearity.supxlabel(
-    "Input modal coeficient [rad RMS]",
+    "Input modal coefficient [rad RMS]",
     x=0.57,
     fontsize=fontsize_label,
 )
 fig_linearity.supylabel(
-    "Reconstructed modal coeficient [rad RMS]", fontsize=fontsize_label
+    "Reconstructed modal coefficient [rad RMS]", fontsize=fontsize_label
 )
 
 fig_name = f"figure_16_linearity.pdf"

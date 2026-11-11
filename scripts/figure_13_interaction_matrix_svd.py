@@ -106,7 +106,7 @@ plt.plot(
 plt.yscale("log")
 plt.legend(loc="lower left", fontsize=7)
 plt.xlabel("# Eigen mode", fontsize=fontsize_label)
-plt.ylabel("Eigenvalue", fontsize=fontsize_label)
+plt.ylabel("Singular value", fontsize=fontsize_label)
 plt.tick_params(axis="both", labelsize=fontsize_tick)
 
 fig_name = f"figure_13_interaction_matrix_svd.pdf"
